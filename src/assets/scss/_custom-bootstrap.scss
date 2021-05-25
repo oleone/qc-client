@@ -1,0 +1,70 @@
+// regular style toast
+@import '~ngx-toastr/toastr';
+
+// Required
+@import "~bootstrap/scss/functions";
+
+// Default variable overrides
+// $body-bg: #000;
+// $body-color: #111;
+
+$azul: #00366e;
+
+.btn {
+    min-width: 200px;
+}
+
+.bg-primary {
+    background-color: $azul !important;
+    color: #fff !important;
+}
+
+// bootstrap style toast
+// or import a bootstrap 4 alert styled design (SASS ONLY)
+// should be after your bootstrap imports, it uses bs4 variables, mixins, functions
+// @import '~ngx-toastr/toastr-bs4-alert';
+
+// Required
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Bootstrap and its default variables
+
+// Optional Bootstrap components here
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/offcanvas";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "~bootstrap/scss/bootstrap-reboot.scss";
+@import "~bootstrap/scss/bootstrap-utilities.scss";
+
+// @import '~ngx-toastr/toastr-bs4-alert';

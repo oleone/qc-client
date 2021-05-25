@@ -1,0 +1,45 @@
+<navbar></navbar>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-10">
+            <h3>Clientes</h3>
+        </div>
+        <div class="col-2 d-flex" style="justify-content: flex-end;">
+            <button class="btn btn-primary" (click)="doDetail()">Adicionar</button>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 table-responsive">
+            <table class="table table-hover table-sm table-clicked">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Telefone</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="apiResult">
+                    <tr *ngFor="let client of apiResult" (click)="doDetail(client)">
+                        <td>{{ client.name | uppercase }}</td>
+                        <td>{{ client.email }}</td>
+                        <td>{{ client.cpf }}</td>
+                        <td>{{ client.phone }}</td>
+                    </tr>
+                </tbody>
+                <tfoot *ngIf="!apiResult">
+                    <tr>
+                        <td colspan="7">
+                            <div class="d-flex justify-content-center">
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
