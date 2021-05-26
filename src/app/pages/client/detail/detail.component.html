@@ -9,7 +9,8 @@
         <div class="col-2 d-flex ml-2" style="justify-content: flex-end;">
             <button class="btn btn-primary" (click)="save()" [disabled]="!form.valid"
                 style="margin-right: 10px;">Salvar</button>
-            <button class="btn btn-light" (click)="goBack()" style="margin-right: 10px;">Voltar</button>
+            <button class="btn btn-danger" (click)="remove()" style="margin-right: 10px;">Deletar</button>
+            <button class="btn btn-light" (click)="goBack()" style="margin-right: 10px;">Cancelar</button>
         </div>
     </div>
 
@@ -43,6 +44,45 @@
                 </div>
             </div>
 
+            <hr class="mt-4" />
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">CEP</label>
+                    <input type="tel" class="form-control" id="exampleFormControlInput1" formControlName="cep"
+                        mask="0000-0000" (change)="getCep()">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Logradouro</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="logradouro">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Número</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="numero">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Complemento</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="complemento">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="bairro">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Estado</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="uf">
+                </div>
+            </div>
         </div>
     </form>
 </div>

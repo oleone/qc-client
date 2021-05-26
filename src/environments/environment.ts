@@ -8,6 +8,7 @@ export const environment = {
   url_base: 'https://qc-crud-api.herokuapp.com/',
   // Local
   // url_base: 'http://localhost:3000/'
+  viacep: 'https://viacep.com.br/ws',
 };
 
 /*
