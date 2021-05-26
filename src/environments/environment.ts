@@ -5,9 +5,9 @@
 export const environment = {
   production: false,
   // Servidor
-  // url_base: 'https://qc-crud-api.herokuapp.com/',
+  url_base: 'https://qc-crud-api.herokuapp.com/',
   // Local
-  url_base: 'http://localhost:3000/'
+  // url_base: 'http://localhost:3000/'
 };
 
 /*
