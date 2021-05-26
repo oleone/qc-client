@@ -27,8 +27,8 @@ export class DetailComponent implements OnInit {
     private cep: CepService) {
     this.form = this.formBuilder.group({
       _id: [null, []],
-      name: [null, [Validators.required]],
-      email: [null, [Validators.required, Validators.email]],
+      name: [null, [Validators.required, Validators.maxLength(50)]],
+      email: [null, [Validators.required, Validators.email, Validators.maxLength(40)]],
       cpf: [null, [Validators.required]],
       phone: [null, []],
       cep: [null, []],
@@ -67,6 +67,7 @@ export class DetailComponent implements OnInit {
       .then(loading => {
         this.service.save(this.form.value)
           .subscribe(result => {
+            console.log(result);
             this.appState.setLoading(false);
             this.form.patchValue(result);
             this.appState.setParam(result);
@@ -77,7 +78,8 @@ export class DetailComponent implements OnInit {
               this.toastr.success('Registro atualizado com sucesso!');
             }
           }, error => {
-            this.toastr.error('Erro ao efetuar registro!');
+            console.log(error);
+            this.toastr.error(error.error.message, 'Erro ao efetuar registro!');
             this.appState.setLoading(false);
           });
       });
