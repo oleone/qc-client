@@ -26,7 +26,7 @@ export class CrudService<T> {
 
   private update(entity: T | any): Observable<ApiResult<T> | ServerError> {
     // tslint:disable-next-line: no-string-literal
-    return this.http.put<ApiResult<T>>(`${this.base_url}/${entity['id']}`, entity).pipe(take(1));
+    return this.http.put<ApiResult<T>>(`${this.base_url}/${entity['_id']}`, entity).pipe(take(1));
   }
 
   save(entity: T | any): Observable<ApiResult<T> | ServerError> {
