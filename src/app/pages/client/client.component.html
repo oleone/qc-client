@@ -39,6 +39,15 @@
                         </td>
                     </tr>
                 </tfoot>
+                <tfoot *ngIf="apiResult && apiResult.length == 0">
+                    <tr>
+                        <td colspan="7">
+                            <div class="d-flex justify-content-center">
+                                {{ apiResultMessage }}
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     </div>

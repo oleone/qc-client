@@ -12,11 +12,12 @@ import { ClientService } from 'src/app/services/client.service';
 export class ClientComponent implements OnInit {
 
   apiResult: any[] | any = null;
+  apiResultMessage: string;
 
   constructor(private service: ClientService, private appState: AppStateService, private router: Router) { }
 
   ngOnInit(): void {
-    this.getSessions();
+    this.getClients();
   }
 
   doDetail(client?: any) {
@@ -31,10 +32,11 @@ export class ClientComponent implements OnInit {
     });
   }
 
-  getSessions() {
+  getClients() {
     this.appState.setLoading(true).then(state => {
       this.service.find().subscribe(result => {
         this.apiResult = result.data;
+        this.apiResultMessage = result.message;
         this.appState.setLoading(false);
       })
     })

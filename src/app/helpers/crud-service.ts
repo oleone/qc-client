@@ -31,7 +31,7 @@ export class CrudService<T> {
 
   save(entity: T | any): Observable<ApiResult<T> | ServerError> {
     // tslint:disable-next-line: no-string-literal
-    if (entity['id']) {
+    if (entity['_id']) {
       return this.update(entity);
     }
     return this.create(entity);
